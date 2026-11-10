@@ -11,7 +11,10 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <h1 class="logo">📖 ReadEase</h1>
+                <div class="logo-section">
+                    <h1 class="logo">📖 ReadEase</h1>
+                    <span class="badge">✨ Pro</span>
+                </div>
                 <p class="tagline">Making reading easier for everyone</p>
             </div>
         </div>
@@ -47,6 +50,18 @@
                 </div>
 
                 <div class="control-group">
+                    <button id="copy-btn" class="btn btn-accent" aria-label="Copy text to clipboard">
+                        📋 Copy Text
+                    </button>
+                </div>
+
+                <div class="control-group">
+                    <button id="download-btn" class="btn btn-accent" aria-label="Download text as file">
+                        💾 Download
+                    </button>
+                </div>
+
+                <div class="control-group">
                     <button id="theme-toggle" class="btn btn-control" aria-label="Toggle dark mode">
                         🌙 Dark Mode
                     </button>
@@ -55,6 +70,10 @@
 
             <!-- Text Input Area -->
             <section class="text-section">
+                <div class="section-header">
+                    <h2>Your Text</h2>
+                    <span class="char-count">Characters: <span id="char-count">0</span></span>
+                </div>
                 <textarea 
                     id="text-input" 
                     class="text-area" 
@@ -65,28 +84,111 @@
 
             <!-- Simplified Text Display -->
             <section class="simplified-section" id="simplified-section" style="display: none;">
-                <h2>Simplified Version</h2>
+                <div class="simplified-header">
+                    <h2>✨ Simplified Version</h2>
+                    <div class="simplified-actions">
+                        <button id="copy-simplified-btn" class="btn btn-small" aria-label="Copy simplified text">
+                            📋 Copy
+                        </button>
+                        <button id="close-simplified" class="btn btn-small" aria-label="Close simplified section">
+                            ✕ Close
+                        </button>
+                    </div>
+                </div>
                 <div id="simplified-text" class="simplified-text"></div>
-                <button id="close-simplified" class="btn btn-secondary">Close</button>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section" id="stats-section">
+                <h2>📊 Text Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-label">Words</span>
+                        <span class="stat-value" id="word-count">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Characters</span>
+                        <span class="stat-value" id="char-count-stat">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Reading Time</span>
+                        <span class="stat-value" id="reading-time">0 min</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Sentences</span>
+                        <span class="stat-value" id="sentence-count">0</span>
+                    </div>
+                </div>
             </section>
 
             <!-- Info Section -->
             <section class="info-section">
-                <h2>How to Use ReadEase</h2>
-                <ul>
-                    <li><strong>Paste Text:</strong> Copy and paste any text into the input area above.</li>
-                    <li><strong>Adjust Size:</strong> Use the + and − buttons to make text larger or smaller.</li>
-                    <li><strong>Read Aloud:</strong> Click the "Read Aloud" button to hear the text spoken.</li>
-                    <li><strong>Simplify:</strong> Click "Simplify Text" to rewrite complex sentences into simpler language.</li>
-                    <li><strong>Dark Mode:</strong> Toggle dark mode for comfortable reading at any time of day.</li>
-                </ul>
+                <h2>🎯 How to Use ReadEase</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">📝</span>
+                        <h3>Paste Text</h3>
+                        <p>Copy and paste any text into the input area above.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🔍</span>
+                        <h3>Adjust Size</h3>
+                        <p>Use the + and − buttons to make text larger or smaller.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🔊</span>
+                        <h3>Read Aloud</h3>
+                        <p>Click "Read Aloud" to hear the text spoken.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">✨</span>
+                        <h3>Simplify</h3>
+                        <p>Rewrite complex sentences into simpler language.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🌙</span>
+                        <h3>Dark Mode</h3>
+                        <p>Toggle dark mode for comfortable reading at night.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">💾</span>
+                        <h3>Download</h3>
+                        <p>Save your text or simplified version as a file.</p>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 ReadEase. Made for the CTRL-V Hackathon. Removing barriers to information access.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ReadEase</h4>
+                    <p>Making reading accessible to everyone.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#text-input">Text Input</a></li>
+                        <li><a href="#read-aloud-btn">Read Aloud</a></li>
+                        <li><a href="#simplify-btn">Simplify</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ReadEase. Made for the CTRL-V Hackathon. Removing barriers to information access.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
