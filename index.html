@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadEase - Smart Reading Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">📖 ReadEase</h1>
+                <p class="tagline">Making reading easier for everyone</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Controls Section -->
+            <section class="controls-section">
+                <div class="control-group">
+                    <label for="font-size-display">Font Size:</label>
+                    <div class="font-controls">
+                        <button id="decrease-font" class="btn btn-control" aria-label="Decrease font size">−</button>
+                        <span id="font-size-display" class="size-display">16px</span>
+                        <button id="increase-font" class="btn btn-control" aria-label="Increase font size">+</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <button id="read-aloud-btn" class="btn btn-primary" aria-label="Read text aloud">
+                        🔊 Read Aloud
+                    </button>
+                    <button id="stop-btn" class="btn btn-secondary" style="display: none;" aria-label="Stop reading">
+                        ⏹ Stop
+                    </button>
+                </div>
+
+                <div class="control-group">
+                    <button id="simplify-btn" class="btn btn-primary" aria-label="Simplify text">
+                        ✨ Simplify Text
+                    </button>
+                </div>
+
+                <div class="control-group">
+                    <button id="theme-toggle" class="btn btn-control" aria-label="Toggle dark mode">
+                        🌙 Dark Mode
+                    </button>
+                </div>
+            </section>
+
+            <!-- Text Input Area -->
+            <section class="text-section">
+                <textarea 
+                    id="text-input" 
+                    class="text-area" 
+                    placeholder="Paste or type your text here. Then use the controls above to read, adjust size, or simplify the text."
+                    aria-label="Text input area">
+                </textarea>
+            </section>
+
+            <!-- Simplified Text Display -->
+            <section class="simplified-section" id="simplified-section" style="display: none;">
+                <h2>Simplified Version</h2>
+                <div id="simplified-text" class="simplified-text"></div>
+                <button id="close-simplified" class="btn btn-secondary">Close</button>
+            </section>
+
+            <!-- Info Section -->
+            <section class="info-section">
+                <h2>How to Use ReadEase</h2>
+                <ul>
+                    <li><strong>Paste Text:</strong> Copy and paste any text into the input area above.</li>
+                    <li><strong>Adjust Size:</strong> Use the + and − buttons to make text larger or smaller.</li>
+                    <li><strong>Read Aloud:</strong> Click the "Read Aloud" button to hear the text spoken.</li>
+                    <li><strong>Simplify:</strong> Click "Simplify Text" to rewrite complex sentences into simpler language.</li>
+                    <li><strong>Dark Mode:</strong> Toggle dark mode for comfortable reading at any time of day.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 ReadEase. Made for the CTRL-V Hackathon. Removing barriers to information access.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
